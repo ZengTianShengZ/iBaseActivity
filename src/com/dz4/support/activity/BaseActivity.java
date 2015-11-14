@@ -26,9 +26,6 @@ public class BaseActivity extends Activity implements ToastProxiable,DialogProxi
 		// TODO 自动生成的方法存根
 		super.onCreate(savedInstanceState);
 		mActivityProxy=new ActivityProxy(this);
-		
-		//activity创建时，加入activity管理器中
-		((IApplication)getApplication()).addActivity(this);
 	}
 	@Override
 	protected void onDestroy() {

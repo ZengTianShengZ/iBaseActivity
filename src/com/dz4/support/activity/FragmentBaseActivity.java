@@ -31,7 +31,6 @@ public abstract class FragmentBaseActivity extends FragmentActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mActivityProxy = new ActivityProxy(this);
-		// activity创建时，加入activity管理器中
 		((IApplication) getApplication()).addActivity(this);
 	}
 
@@ -48,7 +47,7 @@ public abstract class FragmentBaseActivity extends FragmentActivity implements
 		// TODO 自动生成的方法存根
 		if (firstTime + 2000 > System.currentTimeMillis()) {
 			//activity创建时，加入activity管理器中
-			((IApplication)getApplication()).exit();;
+			((IApplication)getApplication()).exit();
 			super.onBackPressed();
 		} else {
 			showToast(R.string.activity_exit);
